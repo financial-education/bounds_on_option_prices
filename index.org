@@ -48,3 +48,11 @@ American Call >= European Call
 
 Non-Dividend Paying:
 American Call = European Call
+
+* What About an American Put on a Non-Dividend Paying Stock?
+
+You may exercise the put prior to expiration.  Why?
+
+#+begin_example
+Say ...
+#+end_example
