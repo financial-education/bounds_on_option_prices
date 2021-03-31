@@ -1,0 +1,50 @@
+#+title: Bounds on Option Prices
+#+author: Matt Brigida, Ph.D.
+#+email: matthew.brigida@sunypoly.edu
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/org/theme-readtheorg.setup
+
+#+BEGIN_QUOTE
+Intrinsic Value:  The value of the option if it were to expire immediately (e.g. max(S - X, 0) for a call option).
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+Time Value: The option price minus the intrinsic value.
+#+END_QUOTE
+
+* Never Exercise and American Call on a Non-Dividend Paying Stock
+
+Consider two portfolios:
+
+1.  Buy share of stock
+
+2. 
+ a. Buy zero-coupon bond with X par
+ b. Buy call option with X strike
+
+
+Payoff:
+
+Portfolio 1:
+|       | $S_T > X$ | $S_T < X$ |
+|-------+-----------+-----------|
+| S_T   | S_T       | S_T       |
+|-------+-----------+-----------|
+| Total | S_T       | S_T       |
+
+
+Portfolio 2:
+|       | $S_T > X$ | $S_T < X$ |
+|-------+-----------+-----------|
+| C     | $S_T - X$ | 0         |
+| Bond  | X         | X         |
+|-------+-----------+-----------|
+| Total | $S_T$     | X         |
+
+=> We will pay more for portfolio 2.
+
+$C_0 + \frac{X}{1+r} > S_0 \rightarrow C_0  > max(S_0 - \frac{X}{1+r}, 0) > max(S_0 - X, 0)$
+
+American Call >= European Call
+
+Non-Dividend Paying:
+American Call = European Call
